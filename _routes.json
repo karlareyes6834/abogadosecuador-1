@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "description": "Sistema de rutas optimizado v3.0 - Manejo especializado de recursos estáticos y SPA",
+  "include": [
+    "/*"
+  ],
+  "exclude": [
+    "/assets/*",
+    "/fallback/*",
+    "/img/*",
+    "/static/*",
+    "/images/*",
+    "/fonts/*",
+    "/js/*",
+    "/css/*",
+    "/icons/*",
+    "/logo*.png",
+    "/manifest.json",
+    "/sitemap.xml",
+    "/robots.txt",
+    "/favicon.ico",
+    "/favicon.svg",
+    "/favicon-*.png",
+    "/apple-touch-icon.png",
+    "/android-chrome-*.png",
+    "/browserconfig.xml",
+    "/safari-pinned-tab.svg",
+    "/site.webmanifest",
+    "/mstile-*.png",
+    "/*.js",
+    "/*.css",
+    "/*.map",
+    "/*.txt",
+    "/*.svg",
+    "/*.woff",
+    "/*.woff2",
+    "/*.ttf",
+    "/*.eot"
+  ],
+  "routes": [
+    {
+      "src": "/favicon.ico",
+      "dest": "/favicon.ico"
+    },
+    {
+      "src": "/favicon.svg",
+      "dest": "/favicon.svg"
+    },
+    {
+      "src": "/manifest.json",
+      "dest": "/manifest.json"
+    },
+    {
+      "src": "/api/.*",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "/.*\\.(js|css|png|jpg|gif|svg|ico|json|woff|woff2|ttf|eot)",
+      "dest": "/$&"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
+}
